@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="immoPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <non-jta-data-source>java:comp/env/jdbc/ImmoDS</non-jta-data-source>
+
+        <class>sn.isi.immobilier.model.User</class>
+        <class>sn.isi.immobilier.model.Building</class>
+        <class>sn.isi.immobilier.model.Unit</class>
+        <class>sn.isi.immobilier.model.RentalApplication</class>
+        <class>sn.isi.immobilier.model.Lease</class>
+        <class>sn.isi.immobilier.model.Payment</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.jdbc.time_zone" value="UTC"/>
+
+        <!-- Configuration alternative sans JNDI
+
+          <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+          <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/immo_db"/>
+          <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+          <property name="jakarta.persistence.jdbc.password" value="passer"/>
+            -->
+        </properties>
+
+    </persistence-unit>
+</persistence>

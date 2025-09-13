@@ -1,0 +1,178 @@
+/* Conteneur du formulaire */
+.unit-form-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.unit-form-container h2 {
+    text-align: center;
+    color: #0047AB;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Formulaire */
+.unit-form {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels et champs */
+.unit-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #0047AB;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.unit-form input[type="text"],
+.unit-form input[type="number"],
+.unit-form select {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.unit-form input:focus,
+.unit-form select:focus {
+    border-color: #0047AB;
+    box-shadow: 0 0 5px rgba(0, 71, 171, 0.3);
+    outline: none;
+}
+
+/* Bouton enregistrer */
+.btn-save {
+    background: #0047AB;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.btn-save:hover {
+    background: #003080;
+    transform: translateY(-2px);
+}
+
+/* Message d’erreur */
+.unit-form p {
+    color: #dc3545;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .unit-form-container {
+        width: 95%;
+    }
+    .unit-form {
+        padding: 20px 15px;
+    }
+}
+/* Conteneur du formulaire */
+.profile-form-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.profile-form-container h2 {
+    text-align: center;
+    color: #0047AB;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Formulaire */
+.profile-form {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels et champs */
+.profile-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #0047AB;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form input[type="password"] {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.profile-form input:focus {
+    border-color: #0047AB;
+    box-shadow: 0 0 5px rgba(0, 71, 171, 0.3);
+    outline: none;
+}
+
+/* Champ readonly */
+.profile-form input[readonly] {
+    background-color: #f5f5f5;
+    color: #555;
+    cursor: not-allowed;
+}
+
+/* Bouton enregistrer */
+.btn-save {
+    background: #0047AB;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.btn-save:hover {
+    background: #003080;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .profile-form-container {
+        width: 95%;
+    }
+    .profile-form {
+        padding: 20px 15px;
+    }
+}

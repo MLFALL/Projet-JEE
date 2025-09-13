@@ -1,0 +1,628 @@
+/* Conteneur général */
+.lease-details-container {
+    width: 90%;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.lease-details-container h2 {
+    text-align: center;
+    color: #0047AB;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Table des détails */
+.lease-details-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.lease-details-table th,
+.lease-details-table td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.lease-details-table th {
+    background: #0047AB;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px 0 0 8px;
+}
+
+.lease-details-table td {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Lignes table */
+.lease-details-table tr {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.lease-details-table th,
+.lease-details-table td {
+    flex: 1;
+}
+
+/* Boutons */
+button, .inline-form button {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Bouton résilier */
+.btn-terminate {
+    background: #dc3545;
+    color: #fff;
+}
+.btn-terminate:hover {
+    background: #b52b37;
+}
+
+/* Bouton payer */
+.btn-pay {
+    background: #28a745;
+    color: #fff;
+}
+.btn-pay:hover {
+    background: #218838;
+}
+
+/* Inputs et selects inline-form */
+.inline-form input[type="number"],
+.inline-form input[type="text"],
+.inline-form select {
+    padding: 6px 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lease-details-table tr {
+        flex-direction: column;
+    }
+
+    .lease-details-table th,
+    .lease-details-table td {
+        flex: unset;
+    }
+
+    .inline-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inline-form input,
+    .inline-form select,
+    .inline-form button {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+}
+/* Conteneur général */
+.leases-container {
+    width: 95%;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.leases-container h2 {
+    text-align: center;
+    color: #0047AB;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Table comme des cartes */
+.leases-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.leases-table thead {
+    display: none; /* On cache l'en-tête classique */
+}
+
+.leases-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 15px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leases-table tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Chaque ligne devient une mini-card */
+.leases-table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.leases-table tbody tr td:first-child {
+    font-weight: bold;
+    color: #0047AB;
+}
+
+/* Badges pour statut */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-active {
+    background-color: #28a745;
+}
+.status-inactive {
+    background-color: #6c757d;
+}
+.status-paid {
+    background-color: #17a2b8;
+}
+.status-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* Boutons */
+button, .inline-form button, .btn-details {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Boutons spécifiques */
+.btn-terminate {
+    background: #dc3545;
+    color: #fff;
+}
+.btn-terminate:hover {
+    background: #b52b37;
+}
+
+.btn-pay {
+    background: #28a745;
+    color: #fff;
+}
+.btn-pay:hover {
+    background: #218838;
+}
+
+.btn-details {
+    background: #0047AB;
+    color: #fff;
+}
+.btn-details:hover {
+    background: #003080;
+}
+
+/* Inputs et selects inline */
+.inline-form input[type="number"],
+.inline-form input[type="text"],
+.inline-form select {
+    padding: 6px 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .leases-table tbody tr {
+        padding: 12px 15px;
+    }
+    .inline-form {
+        flex-direction: column;
+    }
+    .inline-form input,
+    .inline-form select,
+    .inline-form button,
+    .btn-details {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+}
+/* Conteneur général */
+.payments-container {
+    width: 95%;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.payments-container h2 {
+    text-align: center;
+    color: #0047AB;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Table transformée en cards */
+.payments-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.payments-table thead {
+    display: none; /* On cache l'en-tête classique pour effet card */
+}
+
+.payments-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 15px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.payments-table tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Cellules affichées comme mini-labels */
+.payments-table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.payments-table tbody tr td:first-child {
+    font-weight: bold;
+    color: #0047AB;
+}
+
+/* Badges statut paiement */
+.payment-status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-paid {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-overdue {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Boutons */
+button, .payment-form button {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Bouton payer */
+.btn-pay {
+    background: #0047AB;
+    color: #fff;
+}
+.btn-pay:hover {
+    background: #003080;
+}
+
+/* Inputs et selects inline-form */
+.payment-form input[type="number"],
+.payment-form input[type="text"],
+.payment-form select {
+    padding: 6px 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .payments-table tbody tr {
+        padding: 12px 15px;
+    }
+    .payment-form {
+        flex-direction: column;
+    }
+    .payment-form input,
+    .payment-form select,
+    .payment-form button {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+}
+/* Conteneur général */
+.units-container {
+    width: 95%;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.units-container h2 {
+    text-align: center;
+    color: #0047AB;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Messages d'alerte */
+.alert {
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Bouton ajouter unité */
+.btn-add {
+    display: inline-block;
+    background: #0047AB;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.btn-add:hover {
+    background: #003080;
+    transform: translateY(-2px);
+}
+
+/* Formulaire de filtre */
+.filter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-form input,
+.filter-form button {
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.btn-filter {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filter:hover {
+    background: #218838;
+}
+
+/* Table transformée en cards */
+.units-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.units-table thead {
+    display: none; /* pour effet carte */
+}
+
+.units-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 15px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.units-table tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Cellules comme mini-labels */
+.units-table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.units-table tbody tr td:first-child {
+    font-weight: bold;
+    color: #0047AB;
+}
+
+/* Boutons action */
+.btn-edit, .btn-delete, .btn-request {
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.btn-edit {
+    background: #17a2b8;
+    color: #fff;
+}
+.btn-edit:hover { background: #117a8b; }
+
+.btn-delete {
+    background: #dc3545;
+    color: #fff;
+}
+.btn-delete:hover { background: #b52b37; }
+
+.btn-request {
+    background: #0047AB;
+    color: #fff;
+}
+.btn-request:hover { background: #003080; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .units-table tbody tr {
+        padding: 12px 15px;
+    }
+    .filter-form {
+        flex-direction: column;
+    }
+    .filter-form input,
+    .filter-form button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .btn-edit, .btn-delete, .btn-request {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+}
+/* Conteneur général */
+.table-container {
+    width: 95%;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.table-container h2 {
+    text-align: center;
+    color: #0047AB;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Table transformée en cartes */
+.styled-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.styled-table thead {
+    display: none; /* on utilise l’effet card */
+}
+
+.styled-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 15px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.styled-table tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Cellules avec mini-labels */
+.styled-table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.styled-table tbody tr td:first-child {
+    font-weight: bold;
+    color: #0047AB;
+}
+
+/* Badges rôle */
+.role-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.role-admin { background-color: #dc3545; color: #fff; }
+.role-owner { background-color: #28a745; color: #fff; }
+.role-tenant { background-color: #ffc107; color: #000; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .styled-table tbody tr {
+        padding: 12px 15px;
+    }
+}
+

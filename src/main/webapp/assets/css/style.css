@@ -1,0 +1,199 @@
+/* Style général du header */
+.site-header {
+    background: linear-gradient(90deg, #FFD700 0%, #0047AB 100%);
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteneur central */
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.site-header .logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover avec contraste */
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Bouton de déconnexion */
+.logout-btn {
+    background: #FFD700;
+    color: #0047AB !important;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 8px 18px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #FFC107;
+    color: #fff !important;
+}
+
+/* Message utilisateur */
+.user-greeting {
+    color: #fff;
+    margin-right: 15px;
+    font-style: italic;
+}
+
+/* Footer général */
+.site-footer {
+    background: linear-gradient(90deg, #FFD700 0%, #0047AB 100%);
+    color: #fff;
+    padding: 25px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+/* Conteneur central */
+.site-footer .footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Texte copyright */
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Liens rapides */
+.footer-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Réseaux sociaux */
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-links, .footer-social {
+        justify-content: center;
+    }
+}
+/* Conteneur principal */
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+/* Titre */
+main h2 {
+    font-size: 32px;
+    color: #0047AB;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Texte d'accueil */
+main p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Liens CTA (call to action) */
+main a {
+    text-decoration: none;
+    color: #0047AB;
+    font-weight: bold;
+    background-color: #FFD700;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+main a:hover {
+    background-color: #FFC107;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Emoji ou message de bienvenue */
+main p:first-of-type {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    main {
+        margin: 30px 15px;
+    }
+    main h2 {
+        font-size: 26px;
+    }
+    main a {
+        padding: 6px 14px;
+    }
+}
+
